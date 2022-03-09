@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "c3e8d9d4-6c41-410b-9918-bd3fa94b6914",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "point",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 116,
+  "height": 106,
+  "platformSettings": {},
+  "subMetas": {
+    "home_btn_veewo_on": {
+      "ver": "1.0.6",
+      "uuid": "39d8491f-e91e-4ca0-8a37-e31c0a79d4a7",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "c3e8d9d4-6c41-410b-9918-bd3fa94b6914",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": 0,
+      "trimX": 8,
+      "trimY": 6,
+      "width": 101,
+      "height": 94,
+      "rawWidth": 116,
+      "rawHeight": 106,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

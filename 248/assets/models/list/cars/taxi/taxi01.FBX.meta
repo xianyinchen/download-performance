@@ -1,0 +1,307 @@
+{
+  "ver": "1.1.3",
+  "uuid": "797b08cd-57bc-4374-b8b4-de9dd29dc4e1",
+  "importer": "fbx",
+  "scaleFactor": 1,
+  "boneCount": 0,
+  "precomputeJointMatrix": false,
+  "animationFrameRate": 30,
+  "subMetas": {
+    "buffer.bin": {
+      "ver": "1.0.2",
+      "uuid": "4699c061-1f39-4c2d-948f-5c0e42fa9a46",
+      "importer": "buffer",
+      "name": "buffer.bin",
+      "subMetas": {}
+    },
+    "chuzu02.mesh": {
+      "ver": "1.0.3",
+      "uuid": "f5b700fd-afd4-4014-bf35-2ed2aa9871cb",
+      "importer": "mesh",
+      "verts": 3625,
+      "tris": 1797,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0492656789720058,
+        "y": -0.0884276479482651,
+        "z": 0.0124603575095534
+      },
+      "maxPos": {
+        "x": 0.0470513254404068,
+        "y": 0.0894032046198845,
+        "z": 0.0837367027997971
+      },
+      "name": "chuzu02.mesh",
+      "subMetas": {}
+    },
+    "tyre4.mesh": {
+      "ver": "1.0.3",
+      "uuid": "c6683acb-c2b3-40c2-a75a-4abf4f91f9ad",
+      "importer": "mesh",
+      "verts": 120,
+      "tris": 40,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.00728471064940095,
+        "y": -0.0135663915425539,
+        "z": -0.0130294309929013
+      },
+      "maxPos": {
+        "x": 0.00724530033767223,
+        "y": 0.0135663831606507,
+        "z": 0.014388064853847
+      },
+      "name": "tyre4.mesh",
+      "subMetas": {}
+    },
+    "tyre1.mesh": {
+      "ver": "1.0.3",
+      "uuid": "905d08ab-dd03-4d48-bf2a-848d8acad964",
+      "importer": "mesh",
+      "verts": 120,
+      "tris": 40,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.00509336497634649,
+        "y": -0.0135664092376828,
+        "z": -0.0129982586950064
+      },
+      "maxPos": {
+        "x": 0.00941041763871908,
+        "y": 0.0135663542896509,
+        "z": 0.0144192427396774
+      },
+      "name": "tyre1.mesh",
+      "subMetas": {}
+    },
+    "tyre2.mesh": {
+      "ver": "1.0.3",
+      "uuid": "73362dd7-7a2f-426f-a0bc-294ce9435bec",
+      "importer": "mesh",
+      "verts": 120,
+      "tris": 40,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.007284767460078,
+        "y": -0.0135663980618119,
+        "z": -0.0130294132977724
+      },
+      "maxPos": {
+        "x": 0.0072453604079783,
+        "y": 0.013566367328167,
+        "z": 0.0143880946561694
+      },
+      "name": "tyre2.mesh",
+      "subMetas": {}
+    },
+    "tyre3.mesh": {
+      "ver": "1.0.3",
+      "uuid": "7bb1b688-8f14-4a92-bc8f-a25f776ab120",
+      "importer": "mesh",
+      "verts": 120,
+      "tris": 40,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.00509337522089481,
+        "y": -0.0135663971304893,
+        "z": -0.0129983061924577
+      },
+      "maxPos": {
+        "x": 0.00941048376262188,
+        "y": 0.0135663561522961,
+        "z": 0.014419193379581
+      },
+      "name": "tyre3.mesh",
+      "subMetas": {}
+    },
+    "light1.mesh": {
+      "ver": "1.0.3",
+      "uuid": "54d47e5c-ca54-4874-b214-4834041bd05a",
+      "importer": "mesh",
+      "verts": 64,
+      "tris": 32,
+      "submeshes": 1,
+      "attributes": [
+        [
+          "a_normal",
+          "a_position",
+          "a_uv0"
+        ]
+      ],
+      "minPos": {
+        "x": -0.0445899814367294,
+        "y": -0.00696089211851358,
+        "z": -0.00496027618646622
+      },
+      "maxPos": {
+        "x": 0.0445797517895699,
+        "y": 0.00696961395442486,
+        "z": 0.00495351757854223
+      },
+      "name": "light1.mesh",
+      "subMetas": {}
+    },
+    "taxi01.prefab": {
+      "ver": "1.3.2",
+      "uuid": "fb3c109f-723c-4b12-b037-52609bc3f9c1",
+      "importer": "prefab",
+      "optimizationPolicy": "AUTO",
+      "asyncLoadAssets": false,
+      "readonly": true,
+      "content": [
+        {
+          "__type__": "cc.Prefab",
+          "_name": "",
+          "_objFlags": 0,
+          "data": {
+            "__id__": 1
+          }
+        },
+        {
+          "__type__": "cc.Node",
+          "_name": "Sprite",
+          "_objFlags": 0,
+          "_opacity": 255,
+          "_color": {
+            "__type__": "cc.Color",
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          },
+          "_cascadeOpacityEnabled": true,
+          "_parent": null,
+          "_anchorPoint": {
+            "__type__": "cc.Vec2",
+            "x": 0.5,
+            "y": 0.5
+          },
+          "_contentSize": {
+            "__type__": "cc.Size",
+            "width": 40,
+            "height": 36
+          },
+          "_children": [],
+          "_skewX": 0,
+          "_skewY": 0,
+          "_localZOrder": 0,
+          "_globalZOrder": 0,
+          "_tag": -1,
+          "_opacityModifyRGB": false,
+          "_reorderChildDirty": false,
+          "_id": "",
+          "_active": true,
+          "_components": [
+            {
+              "__id__": 2
+            }
+          ],
+          "_prefab": {
+            "__id__": 3
+          },
+          "_eulerAngles": {
+            "__type__": "cc.Vec3",
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "_trs": {
+            "__type__": "TypedArray",
+            "ctor": "Float64Array",
+            "array": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "__type__": "cc.Sprite",
+          "_name": "",
+          "_objFlags": 0,
+          "node": {
+            "__id__": 1
+          },
+          "_enabled": true,
+          "_spriteFrame": {
+            "__uuid__": "8cdb44ac-a3f6-449f-b354-7cd48cf84061"
+          },
+          "_type": 0,
+          "_sizeMode": 1,
+          "_fillType": 0,
+          "_fillCenter": {
+            "__type__": "cc.Vec2",
+            "x": 0,
+            "y": 0
+          },
+          "_fillStart": 0,
+          "_fillRange": 0,
+          "_isTrimmedMode": true,
+          "_srcBlendFactor": 770,
+          "_dstBlendFactor": 771,
+          "_atlas": null
+        },
+        {
+          "__type__": "cc.PrefabInfo",
+          "root": {
+            "__id__": 1
+          },
+          "asset": null,
+          "fileId": "d7118yAG5lKybkFOAh8koPL"
+        }
+      ],
+      "name": "taxi01.prefab",
+      "subMetas": {}
+    },
+    "Material #13.mtl": {
+      "ver": "1.0.5",
+      "uuid": "29b7f521-3880-46cd-bbe0-397ef0616db6",
+      "importer": "material",
+      "dataAsSubAsset": null,
+      "name": "Material #13.mtl",
+      "subMetas": {}
+    }
+  }
+}

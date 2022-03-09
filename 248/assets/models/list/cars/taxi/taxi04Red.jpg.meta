@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "cb15567e-cfb2-4b59-b33c-5549e9ea0ead",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 256,
+  "height": 256,
+  "platformSettings": {},
+  "subMetas": {
+    "taxi04Red": {
+      "ver": "1.0.6",
+      "uuid": "7a8420bf-d441-4b17-a397-7c224e96f28d",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "cb15567e-cfb2-4b59-b33c-5549e9ea0ead",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 256,
+      "height": 256,
+      "rawWidth": 256,
+      "rawHeight": 256,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
