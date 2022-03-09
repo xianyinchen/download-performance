@@ -119,7 +119,17 @@ export default class Loading extends cc.Component {
         let time2 = (new Date()).getTime();
         cc.assetManager.loadBundle('font', (err, res: cc.AssetManager.Bundle) => {
             res.loadDir("list", (err, list) => {
-                this.animation.string = `font = ${(new Date()).getTime() - time2} - ${list.length}`;
+                this.font.string = `font = ${(new Date()).getTime() - time2} - ${list.length}`;
+                this.loadParticles();
+            })
+        })
+    }
+
+    loadParticles() {
+        let time2 = (new Date()).getTime();
+        cc.assetManager.loadBundle('particles', (err, res: cc.AssetManager.Bundle) => {
+            res.loadDir("list", (err, list) => {
+                this.particles.string = `particles = ${(new Date()).getTime() - time2} - ${list.length}`;
             })
         })
     }
