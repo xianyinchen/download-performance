@@ -28,7 +28,7 @@ function createServer(ip, port) {
         }
 
         // 创建server，指定处理客户端请求的函数
-        console.log("IP: " + ip + ":" + port);
+        Editor.log("IP: " + ip + ":" + port);
         remote_server = http.createServer(
             function (request, response) {
                 //判断HTTP方法，只处理GET 
@@ -45,7 +45,7 @@ function createServer(ip, port) {
                 //当文件存在时发送数据给客户端，否则404
                 var fileStat = Fs.stat(Path.join(__dirname, "../../", "." + filePath),
                     function (err, stats) {
-                        console.log("GET file: " + Path.join(__dirname, "../../", "." + filePath));
+                        Editor.log("GET file: " + Path.join(__dirname, "../../", "." + filePath));
 
                         if (err) {
                             response.writeHead(404);
@@ -75,7 +75,7 @@ function createServer(ip, port) {
         ).listen(port);
     }
     catch (e) {
-        console.log(e);
+        Editor.log(e);
     }
 }
 
@@ -149,7 +149,7 @@ module.exports = {
 
                 createServer(getIPAdress(), 5500);
             } catch (error) {
-                console.log(error)
+                Editor.log(error)
             }
         }
     }

@@ -33,6 +33,10 @@ export default class Loading extends cc.Component {
     @property(cc.Label)
     models: cc.Label = null;
 
+    onLoad() {
+        cc.assetManager.cacheManager.clearCache();
+    }
+
     start() {
         let time = (new Date()).getTime();
         cc.assetManager.loadBundle('models', (err, res: cc.AssetManager.Bundle) => {
@@ -48,21 +52,10 @@ export default class Loading extends cc.Component {
         cc.assetManager.loadBundle('textures', (err, res: cc.AssetManager.Bundle) => {
             res.loadDir("list", (err, list) => {
                 this.textures.string = `images = ${(new Date()).getTime() - time2} - ${list.length}`;
-                this.loadPrefabs();
-            })
-        })
-    }
-
-    loadPrefabs() {
-        let time2 = (new Date()).getTime();
-        cc.assetManager.loadBundle('prefab', (err, res: cc.AssetManager.Bundle) => {
-            res.loadDir("list", (err, list) => {
-                this.prefab.string = `prefabs = ${(new Date()).getTime() - time2} - ${list.length}`;
                 this.loadAudios();
             })
         })
     }
-
 
     loadAudios() {
         let time2 = (new Date()).getTime();
@@ -118,7 +111,7 @@ export default class Loading extends cc.Component {
     loadFont() {
         let time2 = (new Date()).getTime();
         cc.assetManager.loadBundle('font', (err, res: cc.AssetManager.Bundle) => {
-            res.loadDir("list", (err, list) => {
+            res.loadDir("list/Averia_Serif", (err, list) => {
                 this.font.string = `font = ${(new Date()).getTime() - time2} - ${list.length}`;
                 this.loadParticles();
             })
@@ -130,6 +123,16 @@ export default class Loading extends cc.Component {
         cc.assetManager.loadBundle('particles', (err, res: cc.AssetManager.Bundle) => {
             res.loadDir("list", (err, list) => {
                 this.particles.string = `particles = ${(new Date()).getTime() - time2} - ${list.length}`;
+                this.loadPrefabs();
+            })
+        })
+    }
+
+    loadPrefabs() {
+        let time2 = (new Date()).getTime();
+        cc.assetManager.loadBundle('prefab', (err, res: cc.AssetManager.Bundle) => {
+            res.loadDir("list", (err, list) => {
+                this.prefab.string = `prefabs = ${(new Date()).getTime() - time2} - ${list.length}`;
             })
         })
     }
