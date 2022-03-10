@@ -1,3 +1,4 @@
+
 'use strict';
 
 const os = require('os');
@@ -28,7 +29,7 @@ function createServer(ip, port) {
         }
 
         // 创建server，指定处理客户端请求的函数
-        console.log("IP: " + ip + ":" + port);
+        console.warn("IP: " + ip + ":" + port);
         remote_server = http.createServer(
             function (request, response) {
                 //判断HTTP方法，只处理GET 
@@ -43,9 +44,9 @@ function createServer(ip, port) {
                 var filePath = sep < 0 ? request.url : request.url.slice(0, sep);
 
                 //当文件存在时发送数据给客户端，否则404
-                var fileStat = Fs.stat(Path.join(__dirname, "../../", "." + filePath),
+                var fileStat = Fs.stat(Path.join(__dirname, "../../../", "." + filePath),
                     function (err, stats) {
-                        console.log("GET file: " + Path.join(__dirname, "../../", "." + filePath));
+                        console.warn("GET file: " + Path.join(__dirname, "../../../", "." + filePath));
 
                         if (err) {
                             response.writeHead(404);
@@ -56,7 +57,7 @@ function createServer(ip, port) {
                         response.writeHead(200, { "Content-Type": "text/plain", "Content-Length": stats.size });
 
                         //使用Stream
-                        var stream = Fs.createReadStream(Path.join(__dirname, "../../", "." + filePath));
+                        var stream = Fs.createReadStream(Path.join(__dirname, "../../../", "." + filePath));
 
                         stream.on('data', function (chunk) {
                             response.write(chunk);
@@ -75,7 +76,7 @@ function createServer(ip, port) {
         ).listen(port);
     }
     catch (e) {
-        console.log(e);
+        console.warn(e);
     }
 }
 
@@ -116,41 +117,29 @@ const rmdirSync = function (path) {
     }
 };
 
-module.exports = {
-    load: function () {
-        // 当 package 被正确加载的时候执行
-    },
+exports.onAfterBuild = function (options, result) {
+    try {
+        var root = Path.join(Editor.Project.path, 'build/', options.outputName);
 
-    unload: function () {
-        // 当 package 被正确卸载的时候执行
-    },
+        copyDir(Path.join(root, '/remote'), Path.join(__dirname, '../../../remote'));
+        rmdirSync(Path.join(root, '/remote'));
 
-    messages: {
-        "editor:build-finished": function (event, target) {
-            try {
-                var root = Path.normalize(target.dest);
+        // 配置远程资源地址
 
-                copyDir(Path.join(root, '/remote'), Path.join(__dirname, '../../remote'));
-                rmdirSync(Path.join(root, '/remote'));
+        var url = Path.join(root, "/src/settings.json");
 
-                // 配置远程资源地址
+        var srcStr = Fs.readFileSync(url, 'utf-8');
+        Fs.writeFileSync(url, srcStr.replace("http://127.0.0.1/", `http://${getIPAdress()}:${5500}/`));
 
-                var url = Path.join(root, "/src/settings.js");
+        // 启动不检测 http 合法性
 
-                var srcStr = Fs.readFileSync(url, 'utf-8');
-                Fs.writeFileSync(url, srcStr.replace("nochange", `http://${getIPAdress()}:${5500}`));
+        var url = Path.join(root, "/project.config.json");
 
-                // 启动不检测 http 合法性
+        var srcStr = Fs.readFileSync(url, 'utf-8');
+        Fs.writeFileSync(url, srcStr.replace(`"urlCheck":true`, `"urlCheck":false`));
 
-                var url = Path.join(root, "/project.config.json");
-
-                var srcStr = Fs.readFileSync(url, 'utf-8');
-                Fs.writeFileSync(url, srcStr.replace(`"urlCheck": true`, `"urlCheck": false`));
-
-                createServer(getIPAdress(), 5500);
-            } catch (error) {
-                console.log(error)
-            }
-        }
+        createServer(getIPAdress(), 5500);
+    } catch (error) {
+        console.warn(error)
     }
-};
+}

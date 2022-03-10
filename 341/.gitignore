@@ -7,7 +7,9 @@ temp/
 local/
 build/
 profiles/
-native
+native/
+remote/
+
 #//////////////////////////
 # NPM
 #//////////////////////////
