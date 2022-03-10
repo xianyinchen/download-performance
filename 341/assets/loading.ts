@@ -35,6 +35,10 @@ export default class Loading extends Component {
     @property(Label)
     models: Label = null;
 
+    onLoad() {
+        assetManager.cacheManager.clearCache();
+    }
+
     start() {
         let time = (new Date()).getTime();
         assetManager.loadBundle('models', (err, res: AssetManager.Bundle) => {
@@ -50,21 +54,10 @@ export default class Loading extends Component {
         assetManager.loadBundle('textures', (err, res: AssetManager.Bundle) => {
             res.loadDir("list", (err, list) => {
                 this.textures.string = `images = ${(new Date()).getTime() - time2} - ${list.length}`;
-                this.loadPrefabs();
-            })
-        })
-    }
-
-    loadPrefabs() {
-        let time2 = (new Date()).getTime();
-        assetManager.loadBundle('prefab', (err, res: AssetManager.Bundle) => {
-            res.loadDir("list", (err, list) => {
-                this.prefab.string = `prefabs = ${(new Date()).getTime() - time2} - ${list.length}`;
                 this.loadAudios();
             })
         })
     }
-
 
     loadAudios() {
         let time2 = (new Date()).getTime();
@@ -132,6 +125,16 @@ export default class Loading extends Component {
         assetManager.loadBundle('particles', (err, res: AssetManager.Bundle) => {
             res.loadDir("list", (err, list) => {
                 this.particles.string = `particles = ${(new Date()).getTime() - time2} - ${list.length}`;
+                this.loadPrefabs();
+            })
+        })
+    }
+
+    loadPrefabs() {
+        let time2 = (new Date()).getTime();
+        assetManager.loadBundle('prefab', (err, res: AssetManager.Bundle) => {
+            res.loadDir("list", (err, list) => {
+                this.prefab.string = `prefabs = ${(new Date()).getTime() - time2} - ${list.length}`;
             })
         })
     }
