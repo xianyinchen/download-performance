@@ -43,7 +43,7 @@ export default class Loading extends Component {
         let time = (new Date()).getTime();
         assetManager.loadBundle('models', (err, res: AssetManager.Bundle) => {
             res.loadDir("list", (err, list) => {
-                this.models.string = `models = ${(new Date()).getTime() - time} - ${list.length}`;
+                this.models.string = `models x10 = ${(new Date()).getTime() - time} - ${list.length}`;
                 this.loadImages();
             })
         })
@@ -53,7 +53,7 @@ export default class Loading extends Component {
         let time2 = (new Date()).getTime();
         assetManager.loadBundle('textures', (err, res: AssetManager.Bundle) => {
             res.loadDir("list", (err, list) => {
-                this.textures.string = `images = ${(new Date()).getTime() - time2} - ${list.length}`;
+                this.textures.string = `images x117 = ${(new Date()).getTime() - time2} - ${list.length}`;
                 this.loadAudios();
             })
         })
@@ -63,7 +63,7 @@ export default class Loading extends Component {
         let time2 = (new Date()).getTime();
         assetManager.loadBundle('audio', (err, res: AssetManager.Bundle) => {
             res.loadDir("list", (err, list) => {
-                this.audio.string = `audios = ${(new Date()).getTime() - time2} - ${list.length}`;
+                this.audio.string = `audios x32 = ${(new Date()).getTime() - time2} - ${list.length}`;
                 this.loadPlists();
             })
         })
@@ -73,7 +73,7 @@ export default class Loading extends Component {
         let time2 = (new Date()).getTime();
         assetManager.loadBundle('atlas', (err, res: AssetManager.Bundle) => {
             res.loadDir("list", (err, list) => {
-                this.atlas.string = `plists = ${(new Date()).getTime() - time2} - ${list.length}`;
+                this.atlas.string = `atlas x5 = ${(new Date()).getTime() - time2} - ${list.length}`;
                 this.loadTmxs();
             })
         })
@@ -83,7 +83,7 @@ export default class Loading extends Component {
         let time2 = (new Date()).getTime();
         assetManager.loadBundle('tmxs', (err, res: AssetManager.Bundle) => {
             res.loadDir("list", (err, list) => {
-                this.tmxs.string = `tmxs = ${(new Date()).getTime() - time2} - ${list.length}`;
+                this.tmxs.string = `tmxs x2 = ${(new Date()).getTime() - time2} - ${list.length}`;
                 this.loadVideos();
             })
         })
@@ -94,7 +94,7 @@ export default class Loading extends Component {
         let time2 = (new Date()).getTime();
         assetManager.loadBundle('video', (err, res: AssetManager.Bundle) => {
             res.loadDir("list", (err, list) => {
-                this.video.string = `videos = ${(new Date()).getTime() - time2} - ${list.length}`;
+                this.video.string = `videos x1 = ${(new Date()).getTime() - time2} - ${list.length}`;
                 this.loadAnims();
             })
         })
@@ -104,7 +104,7 @@ export default class Loading extends Component {
         let time2 = (new Date()).getTime();
         assetManager.loadBundle('animation', (err, res: AssetManager.Bundle) => {
             res.loadDir("list", (err, list) => {
-                this.animation.string = `anims = ${(new Date()).getTime() - time2} - ${list.length}`;
+                this.animation.string = `anims x63 = ${(new Date()).getTime() - time2} - ${list.length}`;
                 this.loadFont();
             })
         })
@@ -113,8 +113,8 @@ export default class Loading extends Component {
     loadFont() {
         let time2 = (new Date()).getTime();
         assetManager.loadBundle('font', (err, res: AssetManager.Bundle) => {
-            res.loadDir("list", (err, list) => {
-                this.font.string = `font = ${(new Date()).getTime() - time2} - ${list.length}`;
+            res.loadDir("list/Averia_Serif", (err, list) => {
+                this.font.string = `font x1 = ${(new Date()).getTime() - time2} - ${list.length}`;
                 this.loadParticles();
             })
         })
@@ -124,7 +124,7 @@ export default class Loading extends Component {
         let time2 = (new Date()).getTime();
         assetManager.loadBundle('particles', (err, res: AssetManager.Bundle) => {
             res.loadDir("list", (err, list) => {
-                this.particles.string = `particles = ${(new Date()).getTime() - time2} - ${list.length}`;
+                this.particles.string = `particles x5 = ${(new Date()).getTime() - time2} - ${list.length}`;
                 this.loadPrefabs();
             })
         })
@@ -134,7 +134,7 @@ export default class Loading extends Component {
         let time2 = (new Date()).getTime();
         assetManager.loadBundle('prefab', (err, res: AssetManager.Bundle) => {
             res.loadDir("list", (err, list) => {
-                this.prefab.string = `prefabs = ${(new Date()).getTime() - time2} - ${list.length}`;
+                this.prefab.string = `prefabs x8 = ${(new Date()).getTime() - time2} - ${list.length}`;
             })
         })
     }
