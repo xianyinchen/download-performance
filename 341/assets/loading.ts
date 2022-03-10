@@ -1,4 +1,4 @@
-import { AssetManager, assetManager, Component, Label, _decorator } from "cc";
+import { AssetManager, assetManager, Component, ImageAsset, Label, _decorator } from "cc";
 
 const { ccclass, property } = _decorator;
 
@@ -39,7 +39,7 @@ export default class Loading extends Component {
         assetManager.cacheManager.clearCache();
     }
 
-    start() {
+    start() {     
         let time = (new Date()).getTime();
         assetManager.loadBundle('models', (err, res: AssetManager.Bundle) => {
             res.loadDir("list", (err, list) => {
@@ -51,6 +51,7 @@ export default class Loading extends Component {
 
     loadImages() {
         let time2 = (new Date()).getTime();
+
         assetManager.loadBundle('textures', (err, res: AssetManager.Bundle) => {
             res.loadDir("list", (err, list) => {
                 this.textures.string = `images x117 = ${(new Date()).getTime() - time2} - ${list.length}`;
