@@ -7,7 +7,7 @@
   "subMetas": {},
   "userData": {
     "compressionType": {
-      "wechatgame": "none",
+      "wechatgame": "merge_all_json",
       "web-desktop": "none"
     },
     "isRemoteBundle": {

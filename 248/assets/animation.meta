@@ -6,8 +6,8 @@
   "bundleName": "",
   "priority": 1,
   "compressionType": {
-    "web-mobile": "none",
-    "wechatgame": "none"
+    "web-mobile": "merge_all_json",
+    "wechatgame": "merge_all_json"
   },
   "optimizeHotUpdate": {
     "web-mobile": false,
